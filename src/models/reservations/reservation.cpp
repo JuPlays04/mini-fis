@@ -8,14 +8,18 @@ Reservation::Reservation(std::string const& from, std::string const& to)
 
 bool Reservation::isEmpty() const
 {
-    // TODO
+    if (from == "" && to == "")
+    {
+        return true;
+    }
+    
 
     return false;
 }
 
 std::string Reservation::getDisplayText() const
 {
-    // TODO
+    std::string displayText = from + " - " + to;
 
-    return "";
+    return displayText;
 }
